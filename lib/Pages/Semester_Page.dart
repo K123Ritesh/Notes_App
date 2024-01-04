@@ -101,9 +101,10 @@ class Sem1 extends StatelessWidget {
         )),
         body: ListView.builder(
           itemBuilder: (context, index) {
-            return Subject_Widget(subjectName: list[index],url: list[list.length-index-1]);
+            return MyContainer11(
+                subjectName: list[index], url: list[list.length - index - 1]);
           },
-          itemCount:(0.5*list.length).toInt(),
+          itemCount: (0.5 * list.length).toInt(),
         ));
   }
 }
@@ -125,22 +126,14 @@ class Semester_List extends StatelessWidget {
       ),
       body: ListView(children: [
         SizedBox(height: 10),
-        CustomCardWidget(
-            subjectName: "Semester 1", onPressed: Buttons_function[0]),
-        CustomCardWidget(
-            subjectName: "Semester 2", onPressed: Buttons_function[1]),
-        CustomCardWidget(
-            subjectName: "Semester 3", onPressed: Buttons_function[2]),
-        CustomCardWidget(
-            subjectName: "Semester 4", onPressed: Buttons_function[3]),
-        CustomCardWidget(
-            subjectName: "Semester 5", onPressed: Buttons_function[4]),
-        CustomCardWidget(
-            subjectName: "Semester 6", onPressed: Buttons_function[5]),
-        CustomCardWidget(
-            subjectName: "Semester 7", onPressed: Buttons_function[6]),
-        CustomCardWidget(
-            subjectName: "Semester 8", onPressed: Buttons_function[7])
+        MyContainer(subjectName: "Semester 1", onPressed: Buttons_function[0]),
+        MyContainer(subjectName: "Semester 2", onPressed: Buttons_function[1]),
+        MyContainer(subjectName: "Semester 3", onPressed: Buttons_function[2]),
+        MyContainer(subjectName: "Semester 4", onPressed: Buttons_function[3]),
+        MyContainer(subjectName: "Semester 5", onPressed: Buttons_function[4]),
+        MyContainer(subjectName: "Semester 6", onPressed: Buttons_function[5]),
+        MyContainer(subjectName: "Semester 7", onPressed: Buttons_function[6]),
+        MyContainer(subjectName: "Semester 8", onPressed: Buttons_function[7])
       ]),
     );
   }
@@ -149,9 +142,13 @@ class Semester_List extends StatelessWidget {
 // All Data's of a page
 
 class Subject_Data {
-
-  final List<List<List<Map<String,String>>>> all_sub1=[
-    [[{"Ritesh":"rakesh"},],[]],
+  final List<List<List<Map<String, String>>>> all_sub1 = [
+    [
+      [
+        {"Ritesh": "rakesh"},
+      ],
+      []
+    ],
   ];
   final List<List<List<String>>> all_sub = [
     [
@@ -299,7 +296,7 @@ class Subject_Data {
         "Basic Electrical Engineering",
         "Engineering Materials",
         "Environmental Studies"
-        "offer_Letter.pdf",
+            "offer_Letter.pdf",
         "offer_Letter.pdf",
         "Syllabus.pdf",
         "Syllabus.pdf",
@@ -764,7 +761,8 @@ class Subject_Data {
         "Chemistry",
         "Introduction to Civil Engineering",
         "Engineering Graphics",
-        "Communication Skills","offer_Letter.pdf",
+        "Communication Skills",
+        "offer_Letter.pdf",
         "offer_Letter.pdf",
         "Syllabus.pdf",
         "offer_Letter.pdf",

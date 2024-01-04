@@ -68,7 +68,7 @@ class _Main_PageState extends State<Main_Page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key:_scaffoldKey,
+        key: _scaffoldKey,
         backgroundColor: Color.fromARGB(255, 235, 212, 212),
         appBar: AppBar(
           backgroundColor: Color.fromARGB(255, 179, 186, 249),
@@ -76,28 +76,30 @@ class _Main_PageState extends State<Main_Page> {
             "WBUT Notes",
             style: TextStyle(fontSize: 24, color: Colors.black),
           ),
-          bottom: AppBar(backgroundColor: Color.fromARGB(255, 179, 186, 249), actions: [
-            Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Text(
-                "Welcome  to WBUT Notes",
-                style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black),
-              ),
-            ),
-            SizedBox(width: 75),
-          ]),
+          bottom: AppBar(
+              backgroundColor: Color.fromARGB(255, 179, 186, 249),
+              actions: [
+                Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Text(
+                    "Welcome  to WBUT Notes",
+                    style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                  ),
+                ),
+                SizedBox(width: 75),
+              ]),
           actions: [
             SizedBox(height: 5),
-           InkWell(
-            onTap: (){
-              _openGiftCardOptions();
-            },
-             child: Lottie.asset("lib/assets/Profile.json",
-                        width:40, height: 50, fit: BoxFit.fill),
-           ),
+            InkWell(
+              onTap: () {
+                _openGiftCardOptions();
+              },
+              child: Lottie.asset("lib/assets/Profile.json",
+                  width: 40, height: 50, fit: BoxFit.fill),
+            ),
             SizedBox(width: 15),
           ],
         ),
